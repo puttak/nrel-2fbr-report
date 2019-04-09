@@ -2,7 +2,11 @@
 
 \section{Fluidized bed pyrolyzer}
 
-The pyrolysis unit in the 2FBR system is a two-inch diameter bubbling fluidized bed reactor that operates at fast pyrolysis conditions. Geometry, operating conditions, and material properties relevant to the reactor are provided in the following tables. An Excel spreadsheet of the tables is also available. Figure \ref{fig:pyrolyzer} shown below illustrates the design and typical operating conditions of the pyrolysis unit.
+This section provides geometric dimensions and typical operating conditions for the pyrolysis reactor in the NREL 2FBR system. Computational model results are also presented in this section.
+
+\subsection{Dimensions and operating conditions}
+
+The pyrolysis unit in the 2FBR system is a two-inch diameter bubbling fluidized bed reactor that operates at fast pyrolysis conditions. Geometry and typical operating conditions relevant to the reactor are provided in Figure \ref{fig:pyrolyzer} shown below.
 
 \begin{figure}[H]
     \centering
@@ -13,11 +17,33 @@ The pyrolysis unit in the 2FBR system is a two-inch diameter bubbling fluidized 
 
 The distributor in the pyrolysis reactor contains 18 holes in a triangular pattern. Pressure drop across the distributor is about 80-90 inches of $H_2O$. Nitrogen gas is used to fluidize the bed and feed biomass particles. Experiments are conducted with an initial mass of sand in the bed; sand is not fed into the reactor during operation. Pyrolysis vapors exit directly out the top of the reactor via a straight tube.
 
-Several woody feedstocks have been tested in the pyrolysis unit; however, loblolly pine is the current focus of ongoing experiments. Properties of loblolly pine from the Wood Handbook are provided in the table shown below. Particle diameters are from the cleanpine-particle-size.xlsx spreadsheet provided by NREL.
+\subsection{Feedstock properties}
 
-Sand properties are bulk density 1510 kg/m$^3$, apparent density 2500 kg/m$^3$, particle size as sieved 0.3 to 0.5 mm, and sphericity 0.86.
+Several woody feedstocks have been tested in the pyrolysis unit; however, loblolly pine is the current focus of ongoing experiments. Properties of loblolly pine from the Wood Handbook are provided in Table XX shown below.
+
+Particle diameters are from the cleanpine-particle-size.xlsx spreadsheet provided by NREL.
 
 Loblolly pine density 540 kg/m$^3$, thermal conductivity of pine 0.12 W/(m K), and heat capacity of pine calculated from $0.1031 + 0.003867 T$ kJ/(kg K). Particle size 10th percentile 133.2 um, particle size 50th percentile 534.4 um, and particle size 90th percentile 1057.4 um. Surface weighted mean size 248.2 um and volume weighted mean size 573.9 um. Ultimate analysize values on a wet basis taken from Iisa 2017 paper are C 49.6\%, H 6.3\%, O 43.5 \%, N 0.1\%, S less than 0.1\%, ash 0.3\%, and water content 2.3\%.
+
+\subsection{Sand properties}
+
+Sand properties for the pyrolyzer bed material are presented in Table \ref{tab:sand-properties}. Particle size as sieved was reported as 0.3 to 0.5 mm.
+
+\begin{table}[H]
+    \centering
+    \caption{Sand particle properties for the pyrolyzer bed material.}
+    \label{tab:sand-properties}
+    \begin{tabular}{llrr}
+        \toprule
+        Property & Description & Value & Units \\
+        \midrule
+        d$_p$ & diameter & 0.0003 & m \\
+        $\phi$ & sphericity & 0.86 & - \\
+        $\rho_{app}$ & apparent density & 2500 & kg/m$^3$ \\
+        $\rho_{bulk}$ & bulk density & 1510 & kg/m$^3$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 \subsection{Biomass pyrolysis kinetics}
 
