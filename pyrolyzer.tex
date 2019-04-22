@@ -2,20 +2,83 @@
 
 \section{Fluidized bed pyrolyzer}
 
-This section provides geometric dimensions and typical operating conditions for the pyrolysis reactor in the NREL 2FBR system. Computational model results are also presented in this section.
-
-\subsection{Dimensions and operating conditions}
-
-The pyrolysis unit in the 2FBR system is a two-inch diameter bubbling fluidized bed reactor that operates at fast pyrolysis conditions. Geometry and typical operating conditions relevant to the reactor are provided in Figure \ref{fig:pyrolyzer} shown below.
+The biomass pyrolysis unit in the NREL 2FBR system is a two-inch diameter bubbling fluidized bed (BFB) reactor that operates at fast pyrolysis conditions. An overview of the pyrolyzer components along with its process flows are shown in Figure \ref{fig:pyrolyzer}. See the following subsections for more information on reactor dimensions, typical operating conditions, feedstock characteristics, bed material properties, and biomass pyrolysis kinetic schemes.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{pyrolyzer}
-    \caption{Fluidized bed pyrolyzer.}
+    \caption{Bubbling fluidized bed biomass pyrolysis reactor in the NREL 2FBR system. Reactor components (left) along with inlet and outlet process flows (right).}
     \label{fig:pyrolyzer}
 \end{figure}
 
-The distributor in the pyrolysis reactor contains 18 holes in a triangular pattern. Pressure drop across the distributor is about 80-90 inches of $H_2O$. Nitrogen gas is used to fluidize the bed and feed biomass particles. Experiments are conducted with an initial mass of sand in the bed; sand is not fed into the reactor during operation. Pyrolysis vapors exit directly out the top of the reactor via a straight tube.
+\subsection{Dimensions and operating conditions}
+
+The distributor in the pyrolysis reactor contains 18 holes in a triangular pattern. Pressure drop across the distributor is about 80-90 inches of H$_2$O. Nitrogen gas is used to fluidize the bed and feed biomass particles. Experiments are conducted with an initial mass of sand in the bed; sand is not fed into the reactor during operation. Pyrolysis vapors exit directly out the top of the reactor via a straight tube.
+
+\begin{table}[H]
+    \centering
+    \caption{Dimensions and properties for components of the fluidized bed pyrolysis reactor.}
+    \label{tab:dimensions}
+    \begin{tabular}{llrl}
+        \toprule
+        Component & Name & Value & Description \\
+        \midrule
+        Reactor
+            & D$_\textrm{inner}$ & 5.08 cm & inner diameter \\
+            & H$_\textrm{static}$ & 10.16 cm & static bed height \\
+            & H$_\textrm{total}$ & 43.18 cm & total height of reactor tube \\
+        Feed inlet
+            & H$_\textrm{feed}$ & 1.9 cm & feed height above distributor \\
+            & D$_\textrm{inner}$ & x & inner diameter \\
+        Insulation & $\epsilon$ & 0.92 & emissivity of insulation surface \\
+            & H$_\textrm{insul}$ & 43.18 cm & insulation height \\
+            & k$_\textrm{insul}$ & 0.0022 W/mK & thermal conductivity \\
+            & W$_\textrm{insul}$ & 10 cm & thickness \\
+        Heat jacket & H$_\textrm{jack}$ & 35 cm & height of jacket \\
+            & W$_\textrm{jack}$ & 5 cm & thickness of jacket \\
+            & Q & 0.38 kW & heat transfer to interior \\
+        Distributor
+            & D$_\textrm{orif}$ & 0.79 mm & diameter of distributor orifices \\
+            & n & 18 & number of orifices \\
+            & W & 3.17 mm & thickness of distributor plate \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Typical operating conditions for the fluidized bed pyrolysis reactor.}
+    \label{tab:operating}
+    \begin{tabular}{llrl}
+        \toprule
+        Component & Parameter & Value & Description \\
+        \midrule
+        Reactor
+            & P$_\textrm{avg}$ & 101.3 kPa (abs) & average pressure \\
+            & P$_\textrm{atm}$ & 81 kPa & atmospheric pressure \\
+            & T$_\textrm{amb}$ & 300.15 K & ambient air temperature \\
+        Bed material
+            & $\epsilon$ & 0.76 & average emissivity of particles \\
+            & m$_\textrm{bed}$ & 330 g & mass of sand particles in bed \\
+            & $\rho_\textrm{bulk}$ & 1510 kg/m$^3$ & bulk particle density \\
+            & $\rho_\textrm{app}$ & 2500 kg/m$^3$ & apparent particle density \\
+            & $\phi$ & 0.86 & particle sphericity \\
+            & T & 773.15 K & bed temperature \\
+            & P & 16.7 psi (115 kPa abs.) & bed pressure \\
+        Inlet gas
+            & $\Delta$p & 21.17 kPa & distributor pressure drop \\
+            & U$_\textrm{gas}$ & 14 SLM (0.292 g/s) & nitrogen gas flowrate \\
+            & T$_\textrm{gas}$ & 773.15 K & inlet gas temperature \\
+            & P$_\textrm{gas}$ & 19.29 psi [133 kPa (abs)] & inlet gas pressure \\
+        Secondary gas
+            & U$_\textrm{gas}$ & 1.4 SLM (0.0292 g/s) & nitrogen gas flowrate \\
+            & T$_\textrm{gas}$ & 298.15 K & gas temperature \\
+        Biomass feed
+            & F$_\textrm{feed}$ & 425 g/hr & biomass feedrate \\
+            & T$_\textrm{feed}$ & 298.15 K & biomass temperature \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 \subsection{Feedstock properties}
 
@@ -23,9 +86,34 @@ Several woody feedstocks have been tested in the pyrolysis unit; however, loblol
 
 Particle diameters are from the cleanpine-particle-size.xlsx spreadsheet provided by NREL.
 
-Loblolly pine density 540 kg/m$^3$, thermal conductivity of pine 0.12 W/(m K), and heat capacity of pine calculated from $0.1031 + 0.003867 T$ kJ/(kg K). Particle size 10th percentile 133.2 um, particle size 50th percentile 534.4 um, and particle size 90th percentile 1057.4 um. Surface weighted mean size 248.2 um and volume weighted mean size 573.9 um. Ultimate analysize values on a wet basis taken from Iisa 2017 paper are C 49.6\%, H 6.3\%, O 43.5 \%, N 0.1\%, S less than 0.1\%, ash 0.3\%, and water content 2.3\%.
+Loblolly pine heat capacity of pine calculated from $0.1031 + 0.003867 T$ kJ/(kg K). Particle size 10th percentile 133.2 um, particle size 50th percentile 534.4 um, and particle size 90th percentile 1057.4 um. Surface weighted mean size 248.2 um and volume weighted mean size 573.9 um. Ultimate analysize values on a wet basis taken from Iisa 2017 paper are C 49.6\%, H 6.3\%, O 43.5 \%, N 0.1\%, S less than 0.1\%, ash 0.3\%, and water content 2.3\%.
 
-\subsection{Sand properties}
+\begin{table}[H]
+    \centering
+    \caption{Loblolly pine feedstock properties for NREL 2FBR pyrolyzer. Heat capacity is a function of temperature.}
+    \label{tab:feedstock}
+    \begin{tabular}{lrl}
+        \toprule
+        Property & Value & Description \\
+        \midrule
+        C & 50.6 \% & ultimate analysis carbon \\
+        H & 6.6 \% & ultimate analysis hydrogen \\
+        O & 42.35 \% & ultimate analysis oxygen \\
+        N & 0.03 \% & ultimate analysis nitrogen \\
+        S & 0.02 \% & ultimate analysis sulfur \\
+        ash & 0.4 \% & ultimate analysis ash \\
+        VM & 85.2 \% & proximate analysis volatile matter \\
+        FC & 11.5 \% & proximate analysis fixed carbon \\
+        MC & 2.9 \% & proximate analysis moisture content \\
+        ash & 0.4 \% & proximate analysis ash \\
+        $\rho$ & 540 kg/m$^3$ & particle density \\
+        C$_\textrm{p}$ & $0.1031 + 0.003867\;\textrm{T}$ kJ/kgK & heat capacity \\
+        k & 0.12 W/mK & thermal conductivity \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Bed properties}
 
 Sand properties for the pyrolyzer bed material are presented in Table \ref{tab:sand-properties}. Particle size as sieved was reported as 0.3 to 0.5 mm.
 
