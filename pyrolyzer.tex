@@ -13,25 +13,27 @@ The biomass thermochemical conversion unit in the NREL 2FBR system is a two-inch
 
 \subsection{Dimensions and operating conditions}
 
-Dimensions for components in the pyrolyzer are given in Table \ref{tab:dimensions}. The gas distributor contains 18 holes in a triangular pattern. Insulation surrounds the unit while heat jackets extend almost the entire height of the reactor.
+Dimensions for the pyrolyzer components are given in Table \ref{tab:dimensions}. The main reactor tube is 2-inch Schedule 40 pipe. The gas distributor contains 18 holes in a triangular pattern. Insulation surrounds the reactor while heat jackets extend almost the entire height of the unit. A cooling jacket surrounds the feed inlet tube.
 
-Table \ref{tab:operating} gives typical operating conditions for the pyrolyzer. Pressure drop across the distributor is about 80-90 inches of H$_2$O. Nitrogen gas is used to fluidize the bed and feed biomass particles. Experiments are conducted with an initial mass of sand in the bed; sand is not fed into the reactor during operation. Pyrolysis vapors exit directly out the top of the reactor via a straight tube.
+Typical operating conditions are presented in Table \ref{tab:operating} for the pyrolyzer. Pressure drop across the distributor is about 80-90 inches of H$_2$O. Nitrogen gas is used to fluidize the bed and feed biomass particles. Experiments are conducted with an initial mass of sand in the bed; sand is not fed into the reactor during operation. Pyrolysis vapors exit directly out the top of the reactor via a straight tube.
 
 \begin{table}[H]
     \centering
-    \caption{Dimensions for components of the fluidized bed pyrolysis reactor.}
+    \caption{Dimensions for components of the fluidized bed pyrolysis reactor. Source \cite{French-2019}.}
     \label{tab:dimensions}
     \begin{tabular}{llrll}
         \toprule
-        Component & Name & Value & Units & Description \\
+        Component & Dimension & Value & Units & Description \\
         \midrule
         Reactor
-            & d$_\textrm{inner}$ & 5.08 & cm & inner diameter \\
-            & h$_\textrm{static}$ & 10.16 & cm & static bed height \\
+            & d$_\textrm{inner}$ & 5.25 & cm & inner diameter \\
+            & d$_\textrm{outer}$ & 6.03 & cm & outer diameter \\
+            & h$_\textrm{static}$ & 10.16 & cm & estimated static bed height \\
             & h$_\textrm{total}$ & 43.18 & cm & total height of reactor tube \\
         Feed inlet
-            & d$_\textrm{inner}$ & x & x & inner diameter \\
-            & h$_\textrm{feed}$ & 1.9 & cm & feed height above distributor \\
+            & d$_\textrm{inner}$ & 1.27 & cm & inner diameter \\
+            & h$_\textrm{feed}$ & 1.9 & cm & height from top of distributor \\
+            & len & 18.29 & cm & length of feed inlet tube \\
         Insulation
             & h$_\textrm{insul}$ & 43.18 & cm & insulation height \\
             & th$_\textrm{insul}$ & 10 & cm & thickness \\
@@ -39,8 +41,8 @@ Table \ref{tab:operating} gives typical operating conditions for the pyrolyzer. 
             & h$_\textrm{jack}$ & 35 & cm & height of jacket \\
             & th$_\textrm{jack}$ & 5 & cm & thickness of jacket \\
         Distributor
-            & d$_\textrm{orif}$ & 0.79 & mm & diameter of distributor orifices \\
-            & n & 18 & - &number of orifices \\
+            & d$_\textrm{orif}$ & 0.08 & cm & diameter of distributor orifices \\
+            & n & 18 & - & number of orifices \\
             & th$_\textrm{dist}$ & 3.17 & mm & thickness of distributor \\
         \bottomrule
     \end{tabular}
@@ -52,7 +54,7 @@ Table \ref{tab:operating} gives typical operating conditions for the pyrolyzer. 
     \label{tab:operating}
     \begin{tabular}{llrll}
         \toprule
-        Component & Parameter & Value & Units & Description \\
+        Component & Condition & Value & Units & Description \\
         \midrule
         Reactor
             & p$_\textrm{abs}$ & 101.3 & kPa & absolute pressure in reactor \\
@@ -63,14 +65,16 @@ Table \ref{tab:operating} gives typical operating conditions for the pyrolyzer. 
             & tk$_\textrm{bed}$ & 773.15 & K & bed temperature \\
         Inlet gas
             & $\Delta$p & 21.17 & kPa & distributor pressure drop \\
-            & p$_\textrm{gas}$ & 133 & kPa & absolute inlet gas pressure \\
+            & p$_\textrm{gas}$ & 110 -- 140 & kPa & absolute inlet gas pressure \\
             & tk$_\textrm{gas}$ & 773.15 & K & inlet gas temperature \\
             & u$_\textrm{gas}$ & 14 & SLM & nitrogen gas flowrate, 0.292 g/s \\
+        Outlet gas
+            & p$_\textrm{gas}$ & 90 -- 110 & kPa & absolute outlet gas pressure \\
         Secondary gas
             & tk$_\textrm{gas}$ & 298.15 & K & gas temperature \\
             & u$_\textrm{gas}$ & 1.4 & SLM & nitrogen gas flowrate, 0.0292 g/s \\
         Biomass feed
-            & $\dot{\textrm{m}}_\textrm{feed}$ & 425 & g/hr & biomass feedrate \\
+            & $\dot{\textrm{m}}_\textrm{feed}$ & 420 & g/hr & biomass feedrate \\
             & tk$_\textrm{feed}$ & 298.15 & K & biomass temperature \\
         \bottomrule
     \end{tabular}
@@ -90,7 +94,7 @@ Loblolly pine heat capacity of pine calculated from $0.1031 + 0.003867 T$ kJ/(kg
     \label{tab:feedstock}
     \begin{tabular}{lrll}
         \toprule
-        Property & Value & Units & Description \\
+        Feed Property & Value & Units & Description \\
         \midrule
         C & 50.6 & \% & ultimate analysis carbon \\
         H & 6.6 & \% & ultimate analysis hydrogen \\
@@ -111,7 +115,7 @@ Loblolly pine heat capacity of pine calculated from $0.1031 + 0.003867 T$ kJ/(kg
 
 \subsection{Bed properties}
 
-Sand properties for the pyrolyzer bed material are presented in Table \ref{tab:sand-properties}. Particle size as sieved was reported as 0.3 to 0.5 mm.
+Bed material for the pyrolyzer is approximately 330 g of sand from a sieve cut of 0.3 to 0.5 mm. Sand properties for the pyrolyzer bed material are presented in Table \ref{tab:sand-properties}.
 
 \begin{table}[H]
     \centering
@@ -119,9 +123,9 @@ Sand properties for the pyrolyzer bed material are presented in Table \ref{tab:s
     \label{tab:sand-properties}
     \begin{tabular}{lrll}
         \toprule
-        Property & Value & Units & Description \\
+        Bed Property & Value & Units & Description \\
         \midrule
-        d$_\textrm{p}$ & 0.0003 & m & particle diameter \\
+        d$_\textrm{p}$ & 0.3 - 0.5 & mm & particle diameter \\
         $\epsilon$ & 0.76 & - & average emissivity of particles \\
         m$_\textrm{bed}$ & 330 & g & mass of bed material \\
         $\phi$ & 0.86 & - & particle sphericity \\
@@ -141,7 +145,7 @@ The BFB pyrolyzer is insulated along the height of the reactor.
     \label{tab:insulation}
     \begin{tabular}{lrll}
         \toprule
-        Property & Value & Units & Description \\
+        Insulation Property & Value & Units & Description \\
         \midrule
         $\epsilon$ & 0.92 & - & emissivity of insulation surface \\
         k & 0.0022 & W/mK & thermal conductivity \\
@@ -155,7 +159,7 @@ The BFB pyrolyzer is insulated along the height of the reactor.
     \label{tab:heatjacket}
     \begin{tabular}{lrll}
         \toprule
-        Property & Value & Units & Description \\
+        Heat Jacket Property & Value & Units & Description \\
         \midrule
         q & 0.38 & kW & heat transfer to interior \\
         \bottomrule
