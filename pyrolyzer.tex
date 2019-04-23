@@ -33,13 +33,10 @@ Table \ref{tab:operating} gives typical operating conditions for the pyrolyzer. 
             & d$_\textrm{inner}$ & x & x & inner diameter \\
             & h$_\textrm{feed}$ & 1.9 & cm & feed height above distributor \\
         Insulation
-            & $\epsilon$ & 0.92 & - & emissivity of insulation surface \\
             & h$_\textrm{insul}$ & 43.18 & cm & insulation height \\
-            & k & 0.0022 & W/mK & thermal conductivity \\
             & th$_\textrm{insul}$ & 10 & cm & thickness \\
         Heat jacket
             & h$_\textrm{jack}$ & 35 & cm & height of jacket \\
-            & q & 0.38 & kW & heat transfer to interior \\
             & th$_\textrm{jack}$ & 5 & cm & thickness of jacket \\
         Distributor
             & d$_\textrm{orif}$ & 0.79 & mm & diameter of distributor orifices \\
@@ -61,18 +58,17 @@ Table \ref{tab:operating} gives typical operating conditions for the pyrolyzer. 
             & p$_\textrm{abs}$ & 101.3 & kPa & absolute pressure in reactor \\
             & p$_\textrm{atm}$ & 81 & kPa & atmospheric pressure \\
             & tk$_\textrm{amb}$ & 300.15 & K & ambient air temperature \\
-        Bed material
-            & m$_\textrm{bed}$ & 330 & g & mass bed material \\
-            & tk$_\textrm{bed}$ & 773.15 & K & bed temperature \\
+        Bed
             & p$_\textrm{bed}$ & 115 & kPa & absolute bed pressure \\
+            & tk$_\textrm{bed}$ & 773.15 & K & bed temperature \\
         Inlet gas
             & $\Delta$p & 21.17 & kPa & distributor pressure drop \\
-            & u$_\textrm{gas}$ & 14 & SLM & nitrogen gas flowrate, 0.292 g/s \\
-            & tk$_\textrm{gas}$ & 773.15 & K & inlet gas temperature \\
             & p$_\textrm{gas}$ & 133 & kPa & absolute inlet gas pressure \\
+            & tk$_\textrm{gas}$ & 773.15 & K & inlet gas temperature \\
+            & u$_\textrm{gas}$ & 14 & SLM & nitrogen gas flowrate, 0.292 g/s \\
         Secondary gas
-            & u$_\textrm{gas}$ & 1.4 & SLM & nitrogen gas flowrate, 0.0292 g/s \\
             & tk$_\textrm{gas}$ & 298.15 & K & gas temperature \\
+            & u$_\textrm{gas}$ & 1.4 & SLM & nitrogen gas flowrate, 0.0292 g/s \\
         Biomass feed
             & $\dot{\textrm{m}}_\textrm{feed}$ & 425 & g/hr & biomass feedrate \\
             & tk$_\textrm{feed}$ & 298.15 & K & biomass temperature \\
@@ -127,9 +123,41 @@ Sand properties for the pyrolyzer bed material are presented in Table \ref{tab:s
         \midrule
         d$_\textrm{p}$ & 0.0003 & m & particle diameter \\
         $\epsilon$ & 0.76 & - & average emissivity of particles \\
+        m$_\textrm{bed}$ & 330 & g & mass of bed material \\
         $\phi$ & 0.86 & - & particle sphericity \\
         $\rho_\textrm{app}$ & 2500 & kg/m$^3$ & apparent density \\
         $\rho_\textrm{bulk}$ & 1510 & kg/m$^3$ & bulk density \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Insulation and heat jacket properties}
+
+The BFB pyrolyzer is insulated along the height of the reactor.
+
+\begin{table}[H]
+    \centering
+    \caption{Insulation properties for the pyrolysis reactor.}
+    \label{tab:insulation}
+    \begin{tabular}{lrll}
+        \toprule
+        Property & Value & Units & Description \\
+        \midrule
+        $\epsilon$ & 0.92 & - & emissivity of insulation surface \\
+        k & 0.0022 & W/mK & thermal conductivity \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Heat jacket properties for the pyrolysis reactor.}
+    \label{tab:heatjacket}
+    \begin{tabular}{lrll}
+        \toprule
+        Property & Value & Units & Description \\
+        \midrule
+        q & 0.38 & kW & heat transfer to interior \\
         \bottomrule
     \end{tabular}
 \end{table}
