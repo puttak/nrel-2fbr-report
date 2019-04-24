@@ -2,7 +2,7 @@
 
 \section{Fluidized bed pyrolyzer}
 
-The biomass thermochemical conversion unit in the NREL 2FBR system is a two-inch diameter bubbling fluidized bed (BFB) reactor that operates at fast pyrolysis conditions. An overview of the pyrolyzer components along with its process flows are shown in Figure \ref{fig:pyrolyzer}. See the following subsections for more information on reactor dimensions, typical operating conditions, feedstock characteristics, bed material properties, and biomass pyrolysis kinetic schemes.
+The biomass thermochemical conversion unit in the NREL 2FBR system is a two-inch diameter bubbling fluidized bed (BFB) reactor that operates at fast pyrolysis conditions. An overview of the pyrolyzer components along with its process flows are shown in Figure \ref{fig:pyrolyzer}. See the following subsections for more information on reactor dimensions, operating conditions, feedstock characteristics, bed material properties, and biomass pyrolysis kinetic schemes.
 
 \begin{figure}[H]
     \centering
@@ -13,13 +13,13 @@ The biomass thermochemical conversion unit in the NREL 2FBR system is a two-inch
 
 \subsection{Dimensions and operating conditions}
 
-Dimensions for the pyrolyzer components are given in Table \ref{tab:dimensions}. The main reactor tube is 2-inch Schedule 40 pipe. The gas distributor contains 18 holes in a triangular pattern. Insulation surrounds the reactor while heat jackets extend almost the entire height of the unit. A cooling jacket surrounds the feed inlet tube.
+Dimensions for the reactor tube, feed inlet, insulation, heat jacket, and distributor plate are given in Table \ref{tab:dimensions}. The main reactor tube is a 2-inch Schedule 40 pipe; therefore, the inner and outer reactor diameters are determined from nominal pipe size tables. The gas distributor contains 18 holes in a triangular pattern.
 
-Typical operating conditions are presented in Table \ref{tab:operating} for the pyrolyzer. Pressure drop across the distributor is about 80-90 inches of H$_2$O. Nitrogen gas is used to fluidize the bed and feed biomass particles. Experiments are conducted with an initial mass of sand in the bed; sand is not fed into the reactor during operation. Pyrolysis vapors exit directly out the top of the reactor via a straight tube.
+Typical operating conditions of the pyrolyzer are presented in Table \ref{tab:operating}. Pressure drop across the distributor is about 80-90 inches of H$_2$O. Nitrogen gas is used to fluidize the bed and assist biomass particles through the feed inlet tube. Experiments are conducted with an initial mass of sand in the bed; sand is not fed into the reactor during operation. Insulation surrounds the reactor while heat jackets extend almost the entire height of the unit. A cooling jacket surrounds the feed inlet tube. Pyrolysis vapors exit directly out the top of the reactor via a straight tube.
 
 \begin{table}[H]
     \centering
-    \caption{Dimensions for components of the fluidized bed pyrolysis reactor. Source \cite{French-2019}.}
+    \caption{Dimensions for components of the fluidized bed pyrolysis reactor. Values from NREL \cite{French-2019}.}
     \label{tab:dimensions}
     \begin{tabular}{llrll}
         \toprule
@@ -50,7 +50,7 @@ Typical operating conditions are presented in Table \ref{tab:operating} for the 
 
 \begin{table}[H]
     \centering
-    \caption{Typical operating conditions for the fluidized bed pyrolysis reactor.}
+    \caption{Typical operating conditions for the fluidized bed pyrolysis reactor. Values from NREL \cite{French-2019}.}
     \label{tab:operating}
     \begin{tabular}{llrll}
         \toprule
@@ -82,33 +82,32 @@ Typical operating conditions are presented in Table \ref{tab:operating} for the 
 
 \subsection{Feedstock properties}
 
-Several woody feedstocks have been tested in the pyrolysis unit; however, loblolly pine is the current focus of ongoing experiments. Properties of loblolly pine from the Wood Handbook are provided in Table XX shown below.
+Several woody feedstocks have been tested in the NREL pyrolysis reactor; however, loblolly pine is the current focus of ongoing experiments. The wood industry refers to this species of wood as southern yellow pine.
 
 Particle diameters are from the cleanpine-particle-size.xlsx spreadsheet provided by NREL.
 
-Loblolly pine heat capacity of pine calculated from $0.1031 + 0.003867 T$ kJ/(kg K). Particle size 10th percentile 133.2 um, particle size 50th percentile 534.4 um, and particle size 90th percentile 1057.4 um. Surface weighted mean size 248.2 um and volume weighted mean size 573.9 um. Ultimate analysize values on a wet basis taken from Iisa 2017 paper are C 49.6\%, H 6.3\%, O 43.5 \%, N 0.1\%, S less than 0.1\%, ash 0.3\%, and water content 2.3\%.
+Particle size 10th percentile 133.2 um, particle size 50th percentile 534.4 um, and particle size 90th percentile 1057.4 um. Surface weighted mean size 248.2 um and volume weighted mean size 573.9 um.
 
 \begin{table}[H]
     \centering
-    \caption{Loblolly pine feedstock properties for NREL 2FBR pyrolyzer. Heat capacity is a function of temperature.}
+    \caption{Loblolly pine feedstock properties for the NREL 2FBR pyrolyzer. Heat capacity is a function of particle temperature.}
     \label{tab:feedstock}
     \begin{tabular}{lrll}
         \toprule
         Feed Property & Value & Units & Description \\
         \midrule
-        C & 50.6 & \% & ultimate analysis carbon \\
-        H & 6.6 & \% & ultimate analysis hydrogen \\
-        O & 42.35 & \% & ultimate analysis oxygen \\
-        N & 0.03 & \% & ultimate analysis nitrogen \\
-        S & 0.02 & \% & ultimate analysis sulfur \\
-        ash & 0.4 & \% & ultimate analysis ash \\
-        VM & 85.2 & \% & proximate analysis volatile matter \\
-        FC & 11.5 & \% & proximate analysis fixed carbon \\
-        MC & 2.9 & \% & proximate analysis moisture content \\
-        ash & 0.4 & \% & proximate analysis ash \\
-        $\rho$ & 540 & kg/m$^3$ & particle density \\
-        C$_\textrm{p}$ & $0.1031 + 0.003867\;\textrm{T}$ & kJ/kgK & heat capacity \\
-        k & 0.12 & W/mK & thermal conductivity \\
+        C & 49.6 & wt\% & carbon \cite{Iisa-2016} \\
+        H & 6.3 & wt\% & hydrogen \cite{Iisa-2016} \\
+        O & 43.5 & wt\% & oxygen \cite{Iisa-2016} \\
+        N & 0.05 & wt\% & nitrogen \cite{Iisa-2016} \\
+        S & 0.12 & wt\% & sulfur \cite{Iisa-2016} \\
+        VM & 85.2 & wt\% & volatile matter \cite{Iisa-2016} \\
+        FC & 11.5 & wt\% & fixed carbon \cite{Iisa-2016} \\
+        MC & 2.9 & wt\% & moisture content \cite{Iisa-2016} \\
+        Ash & 0.43 & wt\% & ash \cite{Iisa-2016} \\
+        $\rho$ & 540 & kg/m$^3$ & particle density \cite{WoodHandbook-2010} \\
+        C$_\textrm{p}$ & $0.1031 + 0.003867\;\textrm{T}$ & kJ/kgK & heat capacity \cite{WoodHandbook-2010} \\
+        k & 0.12 & W/mK & thermal conductivity \cite{WoodHandbook-2010} \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -166,75 +165,4 @@ The BFB pyrolyzer is insulated along the height of the reactor.
     \end{tabular}
 \end{table}
 
-\subsection{Biomass pyrolysis kinetics}
 
-The Ranzi et al. kinetic scheme for biomass fast pyrolysis is described in this section.
-
-\begin{table}[H]
-    \centering
-    \caption{Solid species in Ranzi kinetic scheme.}
-    \begin{tabular}{@{}clll@{}}
-        \toprule
-        Item & Abbreviation & Name & Formula \\
-        \midrule
-        1   & CELL      & cellulose                     & C$_6$H$_{10}$O$_5$ \\
-        2   & CELLA     & activated cellulose           & C$_6$H$_{10}$O$_5$ \\
-        3   & CHAR      & char                          & C \\
-        4   & GCO       & metaplastic carbon monoxide   & CO \\
-        5   & GCO2      & metaplastic carbon dioxide    & CO$_2$ \\
-        6   & GCH4      & metaplastic methane           & CH$_4$ \\
-        7   & GC2H4     & metaplastic ethylene          & C$_2$H$_4$ \\
-        8   & GCH3OH    & metaplastic methyl alcohol    & CH$_4$O \\
-        9   & GCOH2     & metaplastic formaldehyde      & CH$_2$O \\
-        10  & GH2       & metaplastic hydrogen          & H$_2$ \\
-        11  & GMSW      & hemicellulose softwood        & C$_5$H$_8$O$_4$ \\
-        12  & HCE1      & hemicellulose                 & C$_5$H$_8$O$_4$ \\
-        13  & HCE2      & hemicellulose                 & C$_5$H$_8$O$_4$ \\
-        9   & HMWL      & heavy molecular weight lignin & C$_{24}$H$_{28}$O$_4$ \\
-        14  & LIG       & lignin                        & C$_{11}$H$_{12}$O$_4$ \\
-        15  & LIGC      & lignin carbon                 & C$_{15}$H$_{14}$O$_4$ \\
-        16  & LIGCC     & lignin carbon                 & C$_{15}$H$_{14}$O$_4$ \\
-        17  & LIGH      & lignin hydrogen               & C$_{22}$H$_{28}$O$_9$ \\
-        18  & LIGO      & lignin oxygen                 & C$_{20}$H$_{22}$O$_{10}$ \\
-        19  & LIGOH     & lignin hydroxide              & C$_{19}$H$_{22}$O$_8$ \\
-        20  & XYHW      & hemicellulose hardwood        & C$_5$H$_8$O$_4$ \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{table}[H]
-    \centering
-    \caption{Gas species in Ranzi kinetic scheme.}
-    \begin{tabular}{@{}clll@{}}
-        \toprule
-        Item & Abbreviation & Name & Formula \\
-        \midrule
-        1   & ACAC      & acetic acid               & C$_2$H$_4$O$_2$ \\
-        2   & ALD3      & propanal                  & C$_3$H$_6$O \\
-        3   & ANISOLE   & anisole                   & C$_7$H$_8$O \\
-        4   & C2H4      & ethylene                  & C$_2$H$_4$ \\
-        5   & C2H6      & ethane                    & C$_2$H$_6$ \\
-        6   & C2H5OH    & ethanol                   & C$_2$H$_6$O \\
-        7   & C2H3CHO   & 2-propenal                & C$_3$H$_4$O \\
-        8   & C3H6O2    & propanal, 3-hydroxy-      & C$_3$H$_6$O$_2$ \\
-        9   & CH2O      & formaldehyde              & CH$_2$O \\
-        10  & CH3OH     & methyl alcohol            & CH$_4$O \\
-        11  & CH3CHO    & acetaldehyde              & C$_2$H$_4$O \\
-        12  & CH4       & methane                   & CH$_4$ \\
-        13  & CO        & carbon monoxide           & CO \\
-        14  & CO2       & carbon dioxide            & CO$_2$ \\
-        15  & COUMARYL  & coumaryl alcohol          & C$_9$H$_{10}$O$_2$ \\
-        16  & FE2MACR   & sinapaldehyde             & C$_{11}$H$_{12}$O$_4$ \\
-        17  & FURF      & furfural                  & C$_5$H$_4$O$_2$   \\
-        18  & GLYOX     & glyoxal                   & C$_2$H$_2$O$_2$ \\
-        19  & H2        & hydrogen                  & H$_2$ \\
-        20  & H2O       & water                     & H$_2$O \\
-        21  & HAA       & hydroxy-acetaldehyde      & C$_2$H$_4$O$_2$ \\
-        22  & HCOOH     & formic acid               & CH$_2$O$_2$ \\
-        23  & HMFU      & 5-hydroxymethyl-furfural  & C$_6$H$_6$O$_3$ \\
-        24  & LVG       & levoglucosan              & C$_6$H$_{10}$O$_5$ \\
-        25  & PHENOL    & phenol                    & C$_6$H$_6$O \\
-        26  & XYLAN     & xylosan                   & C$_5$H$_8$O$_4$ \\
-        \bottomrule
-    \end{tabular}
-\end{table}
