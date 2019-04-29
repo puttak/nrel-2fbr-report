@@ -2,7 +2,7 @@
 
 \section{Fluidized bed pyrolyzer}
 
-The biomass thermochemical conversion unit in the NREL 2FBR system is a two-inch diameter bubbling fluidized bed (BFB) reactor that operates at fast pyrolysis conditions. An overview of the pyrolyzer components along with its process flows are shown in Figure \ref{fig:pyrolyzer}. See the following subsections for more information on reactor dimensions, operating conditions, feedstock characteristics, bed material properties, and biomass pyrolysis kinetic schemes.
+The biomass thermochemical conversion unit in the NREL 2FBR system is a two-inch diameter bubbling fluidized bed (BFB) reactor that operates at fast pyrolysis conditions. An overview of the pyrolyzer components along with its process flows are shown in Figure \ref{fig:pyrolyzer}. See the following subsections for more information about reactor dimensions, operating conditions, feedstock characteristics, bed properties, insulation and heat jacket properties.
 
 \begin{figure}[H]
     \centering
@@ -50,7 +50,7 @@ Typical operating conditions of the pyrolyzer are presented in Table \ref{tab:op
 
 \begin{table}[H]
     \centering
-    \caption{Typical operating conditions for the fluidized bed pyrolysis reactor. Values from NREL \cite{French-2019}.}
+    \caption{Typical operating conditions for the fluidized bed pyrolysis reactor. Atmospheric pressure is for NREL site in Golden, CO. Values from NREL \cite{French-2019}.}
     \label{tab:operating}
     \begin{tabular}{llrll}
         \toprule
@@ -82,19 +82,17 @@ Typical operating conditions of the pyrolyzer are presented in Table \ref{tab:op
 
 \subsection{Feedstock properties}
 
-Several woody feedstocks have been tested in the NREL pyrolysis reactor; however, loblolly pine is the current focus of ongoing experiments. The wood industry refers to this species of wood as southern yellow pine.
+Several woody feedstocks have been tested in the NREL pyrolysis reactor; however, loblolly pine is the current focus of ongoing experiments. The wood industry refers to this species as southern yellow pine.
 
-Particle diameters are from the cleanpine-particle-size.xlsx spreadsheet provided by NREL.
-
-Particle size 10th percentile 133.2 um, particle size 50th percentile 534.4 um, and particle size 90th percentile 1057.4 um. Surface weighted mean size 248.2 um and volume weighted mean size 573.9 um.
+Table \ref{tab:feedstock} lists feedstock properties for the loblolly pine used in the pyrolyzer experiments. Heat capacity is a function of particle temperature. Information on particle diameters and size distribution were taken from the 150317-cleanpine-particle-size spreadsheet for sample name CleanPine\_B52A\_2 as provided by NREL \cite{French-2019}. D32 is called the Sauter mean diameter and D43 is the DeBroukere mean diameter. See Figures \ref{fig:psdvol} and \ref{fig:psdcumul} for plots of the particle size distribution.
 
 \begin{table}[H]
     \centering
-    \caption{Loblolly pine feedstock properties for the NREL 2FBR pyrolyzer. Heat capacity is a function of particle temperature.}
+    \caption{Loblolly pine feedstock properties for the NREL 2FBR pyrolyzer.}
     \label{tab:feedstock}
     \begin{tabular}{lrll}
         \toprule
-        Feed Property & Value & Units & Description \\
+        Feedstock & Value & Units & Description \\
         \midrule
         C & 49.6 & wt\% & carbon \cite{Iisa-2016} \\
         H & 6.3 & wt\% & hydrogen \cite{Iisa-2016} \\
@@ -105,12 +103,31 @@ Particle size 10th percentile 133.2 um, particle size 50th percentile 534.4 um, 
         FC & 11.5 & wt\% & fixed carbon \cite{Iisa-2016} \\
         MC & 2.9 & wt\% & moisture content \cite{Iisa-2016} \\
         Ash & 0.43 & wt\% & ash \cite{Iisa-2016} \\
-        $\rho$ & 540 & kg/m$^3$ & particle density \cite{WoodHandbook-2010} \\
+        \textrho & 540 & kg/m$^3$ & particle density \cite{WoodHandbook-2010} \\
         C$_\textrm{p}$ & $0.1031 + 0.003867\;\textrm{T}$ & kJ/kgK & heat capacity \cite{WoodHandbook-2010} \\
         k & 0.12 & W/mK & thermal conductivity \cite{WoodHandbook-2010} \\
+        D10 & 133.2 & \textmu m & 10\% of cumulative mass \cite{French-2019} \\
+        D50 & 534.4 & \textmu m & 50\% of cumulative mass \cite{French-2019} \\
+        D90 & 1057.4 & \textmu m & 90\% of cumulative mass \cite{French-2019} \\
+        D32 & 248.2 & \textmu m & volume/surface mean diameter \cite{French-2019} \\
+        D43 & 573.9 & \textmu m & volume mean diameter \cite{French-2019} \\
         \bottomrule
     \end{tabular}
 \end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{psdvol}
+    \caption{Particle size distribution as percent volume for pine feedstock in the pyrolyzer.}
+    \label{fig:psdvol}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{psdcumul}
+    \caption{Particle size distribution as cumulative percent for pine feedstock in the pyrolysis reactor.}
+    \label{fig:psdcumul}
+\end{figure}
 
 \subsection{Bed properties}
 
@@ -122,7 +139,7 @@ Bed material for the pyrolyzer is approximately 330 g of sand from a sieve cut o
     \label{tab:sand-properties}
     \begin{tabular}{lrll}
         \toprule
-        Bed Property & Value & Units & Description \\
+        Bed & Value & Units & Description \\
         \midrule
         d$_\textrm{p}$ & 0.3 - 0.5 & mm & particle diameter \\
         $\epsilon$ & 0.76 & - & average emissivity of particles \\
