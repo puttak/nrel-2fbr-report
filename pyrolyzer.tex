@@ -33,17 +33,17 @@ Typical operating conditions of the pyrolyzer are presented in Table \ref{tab:op
         Feed inlet
             & d$_\textrm{inner}$ & 1.27 & cm & inner diameter \\
             & h$_\textrm{feed}$ & 1.9 & cm & height from top of distributor \\
-            & len & 18.29 & cm & length of feed inlet tube \\
+            & l$_\textrm{feed}$ & 18.29 & cm & length of feed inlet tube \\
         Insulation
             & h$_\textrm{insul}$ & 43.18 & cm & insulation height \\
-            & th$_\textrm{insul}$ & 10 & cm & thickness \\
+            & w$_\textrm{insul}$ & 10 & cm & insulation thickness \\
         Heat jacket
             & h$_\textrm{jack}$ & 35 & cm & height of jacket \\
-            & th$_\textrm{jack}$ & 5 & cm & thickness of jacket \\
+            & w$_\textrm{jack}$ & 5 & cm & thickness of jacket \\
         Distributor
             & d$_\textrm{orif}$ & 0.08 & cm & diameter of distributor orifices \\
             & n & 18 & - & number of orifices \\
-            & th$_\textrm{dist}$ & 3.17 & mm & thickness of distributor \\
+            & w$_\textrm{dist}$ & 3.17 & mm & thickness of distributor \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -84,7 +84,7 @@ Typical operating conditions of the pyrolyzer are presented in Table \ref{tab:op
 
 Several woody feedstocks have been tested in the NREL pyrolysis reactor; however, loblolly pine is the current focus of ongoing experiments. The wood industry refers to this species as southern yellow pine.
 
-Table \ref{tab:feedstock} lists feedstock properties for the loblolly pine used in the pyrolyzer experiments. Heat capacity is a function of particle temperature. Information on particle diameters and size distribution were taken from the 150317-cleanpine-particle-size spreadsheet for sample name CleanPine\_B52A\_2 as provided by NREL \cite{French-2019}. D32 is called the Sauter mean diameter and D43 is the DeBroukere mean diameter. See Figures \ref{fig:psdvol} and \ref{fig:psdcumul} for plots of the particle size distribution.
+Table \ref{tab:feedstock} lists feedstock properties for the loblolly pine used in the pyrolyzer experiments. Heat capacity is a function of particle temperature. Information on particle diameters and size distribution were taken from the "150317-cleanpine-particle-size" spreadsheet for sample name CleanPine\_B52A\_2 as provided by NREL \cite{French-2019}. D32 is called the Sauter mean diameter and D43 is the DeBroukere mean diameter. See Figures \ref{fig:psdvol} and \ref{fig:psdcumul} for plots of the particle size distribution.
 
 \begin{table}[H]
     \centering
@@ -153,7 +153,7 @@ Bed material for the pyrolyzer is approximately 330 g of sand from a sieve cut o
 
 \subsection{Insulation and heat jacket properties}
 
-The BFB pyrolyzer is insulated along the height of the reactor.
+The BFB pyrolyzer is insulated along the height of the reactor while a heat jacket transfers heat into the reactor.
 
 \begin{table}[H]
     \centering
@@ -161,7 +161,7 @@ The BFB pyrolyzer is insulated along the height of the reactor.
     \label{tab:insulation}
     \begin{tabular}{lrll}
         \toprule
-        Insulation Property & Value & Units & Description \\
+        Insulation & Value & Units & Description \\
         \midrule
         $\epsilon$ & 0.92 & - & emissivity of insulation surface \\
         k & 0.0022 & W/mK & thermal conductivity \\
@@ -175,11 +175,87 @@ The BFB pyrolyzer is insulated along the height of the reactor.
     \label{tab:heatjacket}
     \begin{tabular}{lrll}
         \toprule
-        Heat Jacket Property & Value & Units & Description \\
+        Heat Jacket & Value & Units & Description \\
         \midrule
         q & 0.38 & kW & heat transfer to interior \\
         \bottomrule
     \end{tabular}
 \end{table}
 
+\subsection{Pyrolysis yields}
 
+Yield data from the pyrolysis reactor was obtained from the "150317-cleanpine-yields" spreadsheet obtained from NREL \cite{French-2019}. The spreadsheet is for clean pine feedstock, run date at 3/17/15, feedstock lab ID B52A-R2, and lab oil/char ID 6116-032. Pyrolysis yields and carbon balance from a clean pine experiment are given in Table \ref{tab:yields}. In the context of biomass kinetic schemes, the total liquid yield represents the tar or bio-oil yield. Analyses of the oil, char, and gas produced from the clean pine pyrolysis experiment are shown in Table \ref{tab:analyses}.
+
+\begin{table}[H]
+    \centering
+    \caption{Pyrolysis yield data from pyrolyzer experiment with clean pine feedstock. Values from \cite{French-2019}.}
+    \label{tab:yields}
+    \begin{tabular}{lrl}
+        \toprule
+        Product Yields & Value & Units \\
+        \midrule
+        total liquid & 66.1 & wt. \% of feedstock \\
+        char & 11.9 & wt. \% of feedstock \\
+        gas & 16.2 & wt. \% of feedstock \\
+        total & 94.2 & wt. \% of feedstock \\
+        \midrule
+        Carbon Balance & Value & Units \\
+        \midrule
+        C$_\textrm{oil}$ & 60.8 & wt. \% of feed \\
+        C$_\textrm{char}$ & 19.2 & wt. \% of feed \\
+        C$_\textrm{gas}$ & 12.7 & wt. \% of feed \\
+        total & 92.7 & wt. \% of feed \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Analyses of pyrolysis products from a clean pine experiment in the pyrolyzer. Gas analysis is nitrogen-free basis. Values from \cite{French-2019}.}
+    \label{tab:analyses}
+    \begin{tabular}{lrl}
+        \toprule
+        Oil Analysis & Value & Units \\
+        \midrule
+        C & 45.6 & wt. \% as received \\
+        H & 7.4 & wt. \% as received \\
+        N & 0.06 & wt. \% as received \\
+        O & 46.4 & wt. \% by difference \\
+        S & 0.0045 & wt. \% as received \\
+        Ash & 0.53 & wt. \% as received \\
+        Ca & 204.4 & ppm \\
+        Mg & 36.9 & ppm \\
+        Na & 23.5 & ppm \\
+        S & 49.3 & ppm \\
+        Water & 20.4 & KF wt. \% \\
+        Carbonyl & 5.53 & mole/kg \\
+        TAN & 58.56 & (mg KOH)/(g oil) \\
+        Viscosity & 55.0 & cP at 40$^\circ$C \\
+        Density & 1.20 & g/cm$^3$ \\
+        \midrule
+        Char Analysis & Value & Units \\
+        \midrule
+        Ash & 5.1 & wt. \% as received \\
+        C & 79.7 & wt. \% as received \\
+        H & 5.0 & wt. \% as received \\
+        N & 0.3 & wt. \% as received \\
+        O & 9.7 & wt. \% by difference \\
+        S & 0.0438 & wt. \% as received \\
+        Al & 821 & ppm \\
+        Ca & 7019 & ppm \\
+        Fe & 1569 & ppm \\
+        K & 5825 & ppm \\
+        Mg & 2277 & ppm \\
+        Na & 135 & ppm \\
+        P & 612 & ppm \\
+        S & 372 & ppm \\
+        \midrule
+        Gas Analysis & Value & Units \\
+        \midrule
+        CO & 43 & wt. \% \\
+        CO$_2$ & 49 & wt. \% \\
+        CH$_4$ & 5 & wt. \% \\
+        C$_2+$ & 4 & wt. \% \\
+        \bottomrule
+    \end{tabular}
+\end{table}
