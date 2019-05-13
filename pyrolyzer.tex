@@ -2,20 +2,27 @@
 
 \section{Fluidized bed pyrolyzer}
 
-The biomass thermochemical conversion unit in the NREL 2FBR system is a two-inch diameter bubbling fluidized bed (BFB) reactor that operates at fast pyrolysis conditions. An overview of the pyrolyzer components along with its process flows are shown in Figure \ref{fig:pyrolyzer}. See the following subsections for more information about reactor dimensions, operating conditions, feedstock characteristics, bed properties, insulation and heat jacket properties.
+The biomass thermochemical conversion unit in the NREL 2FBR system is a two-inch diameter bubbling fluidized bed (BFB) reactor that operates at fast pyrolysis conditions. An overview of the pyrolyzer components along with its process flows are shown in Figure \ref{fig:pyrolyzer-comps}. See the following subsections for more information about reactor dimensions, operating conditions, feedstock characteristics, bed properties, insulation and heat jacket properties.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{pyrolyzer}
-    \caption{Bubbling fluidized bed biomass pyrolysis reactor in the NREL 2FBR system. Reactor components (left) along with inlet and outlet process flows (right).}
-    \label{fig:pyrolyzer}
+    \includegraphics[width=\textwidth]{pyrolyzer-comps}
+    \caption{Bubbling fluidized bed biomass pyrolysis reactor in the NREL 2FBR system. Reactor components (left) along with inlet and outlet process flows (right). This diagram was constructed based on information from \cite{French-2019}.}
+    \label{fig:pyrolyzer-comps}
 \end{figure}
 
 \subsection{Dimensions and operating conditions}
 
-Dimensions for the reactor tube, feed inlet, insulation, heat jacket, and distributor plate are given in Table \ref{tab:dimensions}. The main reactor tube is a 2-inch Schedule 40 pipe; therefore, the inner and outer reactor diameters are determined from nominal pipe size tables. The gas distributor contains 18 holes in a triangular pattern.
+Dimensions for the reactor tube, feed inlet, insulation, heat jacket, and distributor plate are given in Figure \ref{fig:pyrolyzer-dims-flows} and Table \ref{tab:dimensions}. The main reactor tube is a 2-inch Schedule 40 pipe; therefore, the inner and outer reactor diameters are determined from nominal pipe size tables. The gas distributor contains 18 holes in a triangular pattern.
 
 Typical operating conditions of the pyrolyzer are presented in Table \ref{tab:operating}. Pressure drop across the distributor is about 80-90 inches of H$_2$O. Nitrogen gas is used to fluidize the bed and assist biomass particles through the feed inlet tube. Experiments are conducted with an initial mass of sand in the bed; sand is not fed into the reactor during operation. Insulation surrounds the reactor while heat jackets extend almost the entire height of the unit. A cooling jacket surrounds the feed inlet tube. Pyrolysis vapors exit directly out the top of the reactor via a straight tube.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{pyrolyzer-dims-flows}
+    \caption{Dimensions and typical fast pyrolysis operating conditions for the NREL 2FBR pyrolyzer reactor. This diagram was constructed based on information from \cite{French-2019}.}
+    \label{fig:pyrolyzer-dims-flows}
+\end{figure}
 
 \begin{table}[H]
     \centering
@@ -26,24 +33,24 @@ Typical operating conditions of the pyrolyzer are presented in Table \ref{tab:op
         Component & Dimension & Value & Units & Description \\
         \midrule
         Reactor
-            & d$_\textrm{inner}$ & 5.25 & cm & inner diameter \\
-            & d$_\textrm{outer}$ & 6.03 & cm & outer diameter \\
-            & h$_\textrm{static}$ & 10.16 & cm & estimated static bed height \\
-            & h$_\textrm{total}$ & 43.18 & cm & total height of reactor tube \\
+            & D$_\mathrm{i,\,reactor}$ & 5.25 & cm & inner diameter \\
+            & D$_\mathrm{o,\,reactor}$ & 6.03 & cm & outer diameter \\
+            & H$_\mathrm{static}$ & 10.16 & cm & estimated static bed height \\
+            & H$_\mathrm{total}$ & 43.18 & cm & total height of reactor tube \\
         Feed inlet
-            & d$_\textrm{inner}$ & 1.27 & cm & inner diameter \\
-            & h$_\textrm{feed}$ & 1.9 & cm & height from top of distributor \\
-            & l$_\textrm{feed}$ & 18.29 & cm & length of feed inlet tube \\
+            & D$_\mathrm{i,\,feed}$ & 1.27 & cm & inner diameter \\
+            & H$_\mathrm{feed}$ & 1.9 & cm & height from top of distributor \\
+            & L$_\mathrm{feed}$ & 18.29 & cm & length of feed inlet tube \\
         Insulation
-            & h$_\textrm{insul}$ & 43.18 & cm & insulation height \\
-            & w$_\textrm{insul}$ & 10 & cm & insulation thickness \\
+            & H$_\textrm{insul}$ & 43.18 & cm & insulation height \\
+            & W$_\textrm{insul}$ & 10 & cm & insulation thickness \\
         Heat jacket
-            & h$_\textrm{jack}$ & 35 & cm & height of jacket \\
-            & w$_\textrm{jack}$ & 5 & cm & thickness of jacket \\
+            & H$_\textrm{jack}$ & 35 & cm & height of jacket \\
+            & W$_\textrm{jack}$ & 5 & cm & thickness of jacket \\
         Distributor
-            & d$_\textrm{orif}$ & 0.08 & cm & diameter of distributor orifices \\
+            & D$_\mathrm{orif}$ & 0.08 & cm & diameter of distributor orifices \\
+            & W$_\textrm{dist}$ & 3.17 & mm & thickness of distributor \\
             & n & 18 & - & number of orifices \\
-            & w$_\textrm{dist}$ & 3.17 & mm & thickness of distributor \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -57,25 +64,25 @@ Typical operating conditions of the pyrolyzer are presented in Table \ref{tab:op
         Component & Condition & Value & Units & Description \\
         \midrule
         Reactor
-            & p$_\textrm{abs}$ & 101.3 & kPa & absolute pressure in reactor \\
-            & p$_\textrm{atm}$ & 81 & kPa & atmospheric pressure \\
-            & tk$_\textrm{amb}$ & 300.15 & K & ambient air temperature \\
+            & P$_\mathrm{abs}$ & 101.3 & kPa & absolute pressure in reactor \\
+            & P$_\mathrm{atm}$ & 81 & kPa & atmospheric pressure \\
+            & T$_\mathrm{amb}$ & 300.15 & K & ambient air temperature \\
         Bed
-            & p$_\textrm{bed}$ & 115 & kPa & absolute bed pressure \\
-            & tk$_\textrm{bed}$ & 773.15 & K & bed temperature \\
+            & P$_\mathrm{bed}$ & 115 & kPa & absolute bed pressure \\
+            & T$_\mathrm{bed}$ & 773.15 & K & bed temperature \\
         Inlet gas
-            & $\Delta$p & 21.17 & kPa & distributor pressure drop \\
-            & p$_\textrm{gas}$ & 110 -- 140 & kPa & absolute inlet gas pressure \\
-            & tk$_\textrm{gas}$ & 773.15 & K & inlet gas temperature \\
-            & u$_\textrm{gas}$ & 14 & SLM & nitrogen gas flowrate, 0.292 g/s \\
+            & $\Delta$P & 21.17 & kPa & distributor pressure drop \\
+            & P$_\mathrm{gas}$ & 110 -- 140 & kPa & absolute inlet gas pressure \\
+            & T$_\mathrm{gas}$ & 773.15 & K & inlet gas temperature \\
+            & Q$_\mathrm{gas}$ & 14 & SLM & nitrogen gas flowrate, 0.292 g/s \\
         Outlet gas
-            & p$_\textrm{gas}$ & 90 -- 110 & kPa & absolute outlet gas pressure \\
+            & P$_\mathrm{gas}$ & 90 -- 110 & kPa & absolute outlet gas pressure \\
         Secondary gas
-            & tk$_\textrm{gas}$ & 298.15 & K & gas temperature \\
-            & u$_\textrm{gas}$ & 1.4 & SLM & nitrogen gas flowrate, 0.0292 g/s \\
+            & T$_\mathrm{gas}$ & 298.15 & K & gas temperature \\
+            & Q$_\mathrm{gas}$ & 1.4 & SLM & nitrogen gas flowrate, 0.0292 g/s \\
         Biomass feed
             & $\dot{\textrm{m}}_\textrm{feed}$ & 420 & g/hr & biomass feedrate \\
-            & tk$_\textrm{feed}$ & 298.15 & K & biomass temperature \\
+            & T$_\mathrm{feed}$ & 298.15 & K & biomass temperature \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -131,17 +138,17 @@ Table \ref{tab:feedstock} lists feedstock properties for the loblolly pine used 
 
 \subsection{Bed properties}
 
-Bed material for the pyrolyzer is approximately 330 g of sand from a sieve cut of 0.3 to 0.5 mm. Sand properties for the pyrolyzer bed material are presented in Table \ref{tab:sand-properties}.
+Bed material samples (fresh and used sand) were provided by NREL from a single pyrolysis experiment with a reported particle size range of 300--500 \textmu m sieve cut \cite{French-2019}. Bulk material and particle properties for the bed are given in Table \ref{tab:sand-properties} shown below. Size analysis results of the sand particles are summarized in Table \ref{tab:bed-analysis} while plots for selected characteristics are shown in Figures \ref{fig:fsand-da} to \ref{fig:sph}. Particle data was divided into 60 bins for the analysis.
 
 \begin{table}[H]
     \centering
-    \caption{Bed properties for fluidized sand particles in the pyrolyzer.}
+    \caption{Properties for sand particles in the pyrolyzer bed. Values from \cite{French-2019}.}
     \label{tab:sand-properties}
     \begin{tabular}{lrll}
         \toprule
-        Bed & Value & Units & Description \\
+        Sand property & Value & Units & Description \\
         \midrule
-        d$_\textrm{p}$ & 0.3 - 0.5 & mm & particle diameter \\
+        d$_\textrm{p}$ & 300--500 & \textmu m & sieve cut \\
         $\epsilon$ & 0.76 & - & average emissivity of particles \\
         m$_\textrm{bed}$ & 330 & g & mass of bed material \\
         $\phi$ & 0.86 & - & particle sphericity \\
@@ -150,6 +157,70 @@ Bed material for the pyrolyzer is approximately 330 g of sand from a sieve cut o
         \bottomrule
     \end{tabular}
 \end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Analysis of particle size data for sand particles. All diameters are \textmu m. Da is area equivalent diameter, D$_\textrm{F}$ is Feret length, D$_\textrm{S}$ is Sauter diameter, and $\phi$ is sphericity. Data and analysis code from \cite{Wiggins-2018}.}
+    \label{tab:bed-analysis}
+    \begin{tabular}{lrr}
+        \toprule
+        Bed analysis & Fresh sand & Used sand \\
+        \midrule
+        count & 76,382 & 50,607 \\
+        \midrule
+        Da mean & 402.9 & 343.6 \\
+        Da min & 24.3 & 24.3 \\
+        Da max & 846.2 & 1231.4 \\
+        \midrule
+        D$_\textrm{F}$ mean & 517.5 & 446.6 \\
+        D$_\textrm{F}$ min & 37.8 & 37.8 \\
+        D$_\textrm{F}$ max & 1175.6 & 2727.5 \\
+        \midrule
+        D$_\textrm{S}$ mean & 365.7 & 315.8 \\
+        D$_\textrm{S}$ min & 17.7 & 315.8 \\
+        D$_\textrm{S}$ max & 877.1 & 1240.3 \\
+        \midrule
+        $\phi$ mean & 0.94 & 0.93 \\
+        $\phi$ min & 0.63 & 0.40 \\
+        $\phi$ max & 0.99 & 0.99 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{microtrac_fsand_da}
+    \caption{Particle size distribution for sand particles in bed as Da.}
+    \label{fig:fsand-da}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{microtrac_fsand_df}
+    \caption{Particle size distribution for sand particles in bed as Feret length.}
+    \label{fig:fsand-df}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{microtrac_fsand_ds}
+    \caption{Particle size distribution for sand particles in bed as Sauter diameter.}
+    \label{fig:fsand-ds}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{microtrac_fsand_usand}
+    \caption{Comparison of particle size distributions for fresh and used sand.}
+    \label{fig:fsand-usand}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{microtrac_sph}
+    \caption{Sphericity of sand particles in bed.}
+    \label{fig:sph}
+\end{figure}
 
 \subsection{Insulation and heat jacket properties}
 
